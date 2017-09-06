@@ -17,7 +17,7 @@ RUN apt-get update && \
     apt-get update && \
 	apt-get -y install mysql-client pwgen python-setuptools curl git unzip apache2 php5.6 \
 		php5.6-gd libapache2-mod-php5.6 wget supervisor php5.6-pgsql curl libcurl3 \
-		libcurl3-dev php5.6-curl php5.6-xmlrpc php5.6-intl php5.6-mysql git-core php5.6-xml php5.6-mbstring php5.6-zip php5.6-soap && \
+		libcurl3-dev php5.6-curl php5.6-xmlrpc php5.6-intl php5.6-mysql git-core php5.6-xml php5.6-mbstring php5.6-zip php5.6-soap cron && \
 	chown -R www-data:www-data /var/www/html && \
 	chmod +x /etc/apache2/foreground.sh
 
