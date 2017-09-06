@@ -1,2 +1,2 @@
 # php56
-Dockerfile que levanta un servidor apache 2 con php 5.6.31
+Dockerfile que levanta un servidor apache 2 con php 5.6.31 e instala ioncube
