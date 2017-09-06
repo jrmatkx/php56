@@ -24,6 +24,10 @@ RUN apt-get update && \
 # Enable SSL, moodle requires it
 RUN a2enmod ssl && a2ensite default-ssl  #if using proxy dont need actually secure connection
 
+#instalación de ioncube
+ADD ./ioncube_loader_lin_5.6.so /usr/lib/php/20131226
+ADD ./00-ioncube.ini /etc/php/5.6/apache2/conf.d
+
 # Cleanup, this is ran to reduce the resulting size of the image.
 RUN apt-get clean autoclean && apt-get autoremove -y && rm -rf /var/lib/apt/lists/* /tmp/* /var/tmp/* /var/lib/dpkg/* /var/lib/cache/* /var/lib/log/*
 
